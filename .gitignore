@@ -1,9 +1,18 @@
-env/ 
-venv/ 
-__pycache__/ 
-*.pyc 
-.env 
-db.sqlite3 
-staticfiles/ 
-*.log 
-media/ 
+# Virtual environments
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Django files
+db.sqlite3
+staticfiles/
+media/
+
+# Environment variables
+.env
+
+# Logs
+*.log
