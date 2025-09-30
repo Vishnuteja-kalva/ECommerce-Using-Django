@@ -1,7 +1,7 @@
 from pathlib import Path
 from decouple import config
 import os
-import dj_database_url  # ← ADD THIS LINE
+import dj_database_url
 
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -61,10 +61,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Book.wsgi.application'
 
-# Database
+# Database - CORRECTED TO USE MYSQL_URL
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL'),
+        default=config('MYSQL_URL'),
         conn_max_age=600,
         conn_health_checks=True,
     )
